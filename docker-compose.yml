@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+  db:
+    image: 'postgres:latest'
+    environment:
+      - POSTGRES_PASSWORD=admin
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=percom_garage
+    volumes:
+      - ./data/db:/var/lib/postgresql/data
+  web:
+    build: .
+    command: bash -c "python manage.py makemigrations && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    container_name: percom_garage
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    environment:
+      - POSTGRES_NAME=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=admin
+    depends_on:
+      - db
+#  networks:
+#    service-proxy:
+#  volumes:
+#    pgdata:

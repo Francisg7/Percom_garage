@@ -1,0 +1,118 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Percom Garage Login</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src={% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js'%}></script>
+      <script src={% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js'%}></script>
+
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="#">
+    <meta name="keywords"
+        content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+
+    <link rel="icon" href={% static 'assets/images/favicon.ico' %} type="image/x-icon">
+    <!-- Google font-->
+    <link href={% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,600,800' %} rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href={% static 'bower_components/bootstrap/dist/css/bootstrap.min.css' %}>
+    <!-- themify-icons line icon -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/icon/themify-icons/themify-icons.css' %}>
+    <!-- ico font -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/icon/icofont/css/icofont.css' %}>
+    <!-- flag icon framework css -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/pages/flag-icon/flag-icon.min.css' %}>
+    <!-- Menu-Search css -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/pages/menu-search/css/component.css' %}>
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href={% static 'assets/pages/multi-step-sign-up/css/reset.min.css' %}>
+    <link rel="stylesheet" href={% static 'assets/pages/multi-step-sign-up/css/style.css' %}>
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href={% static 'assets/css/login.css' %}>
+
+
+</head>
+
+<body>
+<div class="container-fluid px-1 px-md-5 px-lg-1 px-xl-5 py-5 mx-auto">
+    <div class="card card0 border-0">
+        <div class="row d-flex">
+            <div class="col-lg-6">
+                <div class="card1 pb-5">
+                    <div class="row"> <img src="{% static 'assets/images/logo_perfitcom.png' %}" class="logo"> </div>
+                    <div class="row px-3 justify-content-center mt-4 mb-5 border-line"> <img src="https://i.imgur.com/uNGdWHi.png" class="image"> </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="card2 card border-0 px-4 py-5">
+                     {% if error %}
+                <div class="container-fluid p-0">
+                <div style="background: red; color: white" class="alert {{error.center}} alert-dismissible" role="alert" >
+                <button type="button"  class="close"  data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+                    {{error}}
+                </div>
+                </div>
+            {% endif %}
+                    <form method="post" action={% url 'login' %}>
+                        {% csrf_token %}
+                      <div class="col-md-8 flex px-2 py-4">
+                        <center class="font-weight-bold">Welcome to Percom Garage</center>
+                    </div>
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">Email Address</h6>
+                        </label> <input class="mb-4" type="text" name="email" placeholder="Enter a valid email address" required> </div>
+                    <div class="row px-3"> <label class="mb-1">
+                            <h6 class="mb-0 text-sm">Password</h6>
+                        </label> <input type="password" name="password" placeholder="Enter password" required> </div>
+                    <div class="row px-3 mb-4">
+                        <div class="custom-control custom-checkbox custom-control-inline"> <input id="chk1" type="checkbox" name="chk" class="custom-control-input"> <label for="chk1" class="custom-control-label text-sm">Remember me</label> </div> <a href="#" class="ml-auto mb-0 text-sm">Forgot Password?</a>
+                    </div>
+                    <div class="row mb-3 px-3"> <button type="submit" class="btn btn-danger text-center">Login</button> </div>
+                    </form>
+                    <div class="row mb-4 px-3"> <small class="font-weight-bold">Don't have an account? <a class="text-danger" href="{% url 'register' %}">Register As a Garage</a></small> </div>
+                    <div class=> <small class="font-weight-bold">Don't have an account? <a class="text-danger" href="{% url 'employe_regis' %}">Register As an Employee</a></small> </div>
+                </div>
+            </div>
+        </div>
+        <div class="bg-blue py-4">
+            <div class="row px-3"> <small class="ml-4 ml-sm-5 mb-2">Copyright PERFITCOM SARL 2021. All rights reserved.</small>
+                <div class="social-contact ml-4 ml-sm-auto"> <span class="fa fa-facebook mr-4 text-sm"></span> <span class="fa fa-google-plus mr-4 text-sm"></span> <span class="fa fa-linkedin mr-4 text-sm"></span> <span class="fa fa-twitter mr-4 mr-sm-5 text-sm"></span> </div>
+            </div>
+        </div>
+    </div>
+</div>
+ <!-- Required Jquery -->
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{% static '/bower_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="{% static '/bower_components/modernizr/modernizr.js ' %}"></script>
+    <!-- Chart js -->
+    <script type="text/javascript" src="{% static '/bower_components/chart.js/dist/Chart.js' %}"></script>
+    <!-- amchart js -->
+    <script src="{% static '/assets/pages/widget/amchart/amcharts.js' %}"></script>
+    <script src="{% static '/assets/pages/widget/amchart/serial.js' %}"></script>
+    <script src="{% static '/assets/pages/widget/amchart/light.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/SmoothScroll.js' %}"></script>
+    <script src="{% static '/assets/js/pcoded.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static '/assets/js/vartical-layout.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/script.min.js' %}"></script>
+</body>
+</html>

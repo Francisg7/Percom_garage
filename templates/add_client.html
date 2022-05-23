@@ -1,0 +1,614 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+
+<!-- Mirrored from demo.dashboardpack.com/adminty-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Oct 2020 10:37:46 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <title>Percom Garage</title>
+    <!-- HTML5 Shim and Respond.js IE10 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 10]>
+      <script src="{% static 'https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js' %}"></script>
+      <script src="{% static 'https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js' %}"></script>
+      <![endif]-->
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="description" content="#">
+    <meta name="keywords"
+        content="Admin , Responsive, Landing, Bootstrap, App, Template, Mobile, iOS, Android, apple, creative app">
+    <meta name="author" content="#">
+    <!-- Favicon icon -->
+    <link rel="icon" href="{% static '/assets/images/favicon.ico' %}" type="image/x-icon">
+    <!-- Google font-->
+    <link href="{% static 'https://fonts.googleapis.com/css?family=Open+Sans:400,600' %}" rel="stylesheet">
+    <!-- Required Fremwork -->
+    <link rel="stylesheet" type="text/css" href="{% static '/bower_components/bootstrap/dist/css/bootstrap.min.css' %}">
+    <!-- feather Awesome -->
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/icon/feather/css/feather.css' %}">
+    <!-- Style.css -->
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/style.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static '/assets/css/jquery.mCustomScrollbar.css' %}">
+</head>
+
+<body>
+    <!-- Pre-loader start -->
+    <div class="theme-loader">
+        <div class="ball-scale">
+            <div class='contain'>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+                <div class="ring">
+                    <div class="frame"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Pre-loader end -->
+    <div id="pcoded" class="pcoded">
+        <div class="pcoded-overlay-box"></div>
+        <div class="pcoded-container navbar-wrapper">
+
+            <nav class="navbar header-navbar pcoded-header">
+                <div class="navbar-wrapper">
+
+                    <div class="navbar-logo">
+                        <a class="mobile-menu" id="mobile-collapse" href="#!">
+                            <i class="feather icon-menu"></i>
+                        </a>
+                        <a href="index.html">
+                            <img class="img-fluid" src="{% static ' ' %}" alt="Theme-Logo" />
+                        </a>
+                        <a class="mobile-options">
+                            <i class="feather icon-more-horizontal"></i>
+                        </a>
+                    </div>
+
+                    <div class="navbar-container">
+                        <ul class="nav-left">
+                            <li class="header-search">
+                                <div class="main-search morphsearch-search">
+                                    <div class="input-group">
+                                        <span class="input-group-addon search-close"><i class="feather icon-x"></i></span>
+                                        <input type="text"  class="form-control">
+                                        <span class="input-group-addon search-btn"><i class="feather icon-search"></i></span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li>
+                                <a href="#!" onclick="javascript:toggleFullScreen()">
+                                    <i class="feather icon-maximize full-screen"></i>
+                                </a>
+                            </li>
+                        </ul>
+                        <ul class="nav-right">
+                            <li class="header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <ul class="show-notification notification-view dropdown-menu"
+                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <li>
+                                            <h6>Notifications</h6>
+                                            <label class="label label-danger">New</label>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius"
+                                                    src="files/assets/images/avatar-4.jpg"
+                                                    alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">John Doe</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+                                                        elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius"
+                                                    src="files/assets/images/avatar-3.jpg"
+                                                    alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Joseph William</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+                                                        elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div class="media">
+                                                <img class="d-flex align-self-center img-radius"
+                                                    src="files/assets/images/avatar-4.jpg"
+                                                    alt="Generic placeholder image">
+                                                <div class="media-body">
+                                                    <h5 class="notification-user">Sara Soudein</h5>
+                                                    <p class="notification-msg">Lorem ipsum dolor sit amet, consectetuer
+                                                        elit.</p>
+                                                    <span class="notification-time">30 minutes ago</span>
+                                                </div>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                            <li class="header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="displayChatbox dropdown-toggle" data-toggle="dropdown">
+                                        <i class="feather icon-message-square"></i>
+                                        <span class="badge bg-c-green">3</span>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="user-profile header-notification">
+                                <div class="dropdown-primary dropdown">
+                                    <div class="dropdown-toggle" data-toggle="dropdown">
+                                        <img src="files/assets/images/avatar-4.jpg" class="img-radius"
+                                            alt="User-Profile-Image">
+                                        <span>John Doe</span>
+                                        <i class="feather icon-chevron-down"></i>
+                                    </div>
+                                    <ul class="show-notification profile-notification dropdown-menu"
+                                        data-dropdown-in="fadeIn" data-dropdown-out="fadeOut">
+                                        <li>
+                                            <a href="#!">
+                                                <i class="feather icon-settings"></i> Settings
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="default/user-profile.html">
+                                                <i class="feather icon-user"></i> Profile
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="default/auth-normal-sign-in.html">
+                                                <i class="feather icon-log-out"></i> Logout
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <nav class="pcoded-navbar">
+                        <div class="pcoded-inner-navbar main-menu">
+                            <div class="pcoded-navigatio-lavel">Votre Garage</div>
+                            <ul class="pcoded-item pcoded-left-item">
+{#                                <li class="active pcoded-trigger">#}
+{#                                    <a href="javascript:void(0)">#}
+{#                                        <span class="pcoded-micon"><i class="feather icon-home"></i></span>#}
+{#                                        <span class="pcoded-mtext">Gestion des Clients</span>#}
+{#                                    </a>#}
+{#                                </li>#}
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-user"></i></span>
+                                        <span class="">Gestion Clientelle</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="{% url 'add_client' %}">
+                                                <span class="pcoded-mtext">Ajouter un client</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="{% url 'list_client' %}    ">
+                                                <span class="pcoded-mtext">Liste des Clients</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-user-plus"></i></span>
+                                        <span class="">Gestion du Personnel</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class="">
+                                            <a href="{% url 'add_employer' %}">
+                                                <span class="pcoded-mtext">Ajouter un Employer</span>
+                                            </a>
+                                        </li>
+                                        <li class="">
+                                            <a href="">
+                                                <span class="pcoded-mtext">Liste des Employer</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-package"></i></span>
+                                        <span class="">Gestion du Stock</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Pièces</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Entrée/Sortie</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                     <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Mouvement de Stock</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-calendar"></i></span>
+                                        <span class="">Planning Rendez-vous</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Rendez-vous</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Ajouter un Rendez-vous</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-file"></i></span>
+                                        <span class="">Facturation</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Facture</span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Etablissement Facture</span>
+                                            </a>
+                                        </li>
+                                    </ul>
+
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-pie-chart"></i></span>
+                                        <span class="">Gestion des Vehicules</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Vehicules</span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Entrée/sortie vehicule</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+                                <li class="pcoded-hasmenu">
+                                    <a href="javascript:void(0)">
+                                        <span class="pcoded-micon"><i class="feather icon-trash"></i></span>
+                                        <span class="">Gestion Interventions</span>
+{#                                        <span class="pcoded-badge label label-warning">NEW</span>#}
+                                    </a>
+                                    <ul class="pcoded-submenu">
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Liste des Interventions</span>
+                                            </a>
+                                        </li>
+                                        <li class=" ">
+                                            <a href="javascript:void(0)">
+                                                <span class="pcoded-mtext">Ajouter une intervention</span>
+                                            </a>
+                                        </li>
+
+                                    </ul>
+
+                                </li>
+
+                            </ul>
+                        </div>
+                    </nav>
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- task, page, download counter  start -->
+                                            <div class="page-header-breadcrumb">
+                                                    <ul class="breadcrumb-title">
+                                                        <li class="breadcrumb-item"  style="float: left;">
+                                                            <a href="#!">
+                                                                <i class="feather icon-user"></i>
+                                                            </a>
+                                                        </li>
+                                                        <li class="breadcrumb-item"  style="float: left;"><a href="#!">Clientelle</a>
+                                                        </li>
+                                                        <li class="breadcrumb-item"  style="float: left;"><a href="#!">Ajouter Client</a>
+                                                        </li>
+                                                    </ul>
+                                             </div><br>
+                                            <div class="col-sm-12">
+                                                <!-- Add client start -->
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Ajouter un Client</h5>
+                                                        <span>Fill in all the relative Informations</span>
+
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <form  method="post" action="{% url 'add_client' %}" enctype="multipart/form-data" >
+                                                            {% csrf_token %}
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Nom
+                                                                    </label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" name="nom"
+                                                                        id="nom" placeholder="Entrer votre nom " required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Prenom
+                                                                    </label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" name="prenom"
+                                                                        id="prenom" placeholder="Entrer votre prenom" required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Addresse</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control"
+                                                                        id="addresse" name="addresse"
+                                                                        placeholder="Region ,Ville, Rue" required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Email
+                                                                    </label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="email" class="form-control"
+                                                                        id="email" name="email"
+                                                                        placeholder="Entrer votre addresse mail" required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Numero CNI</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="number" class="form-control" id="CNI"
+                                                                        name="CNI"
+                                                                        placeholder="Enter Numero CNI valid" required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Numero Portable</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="number" class="form-control" id="phone"
+                                                                        name="phone"
+                                                                        placeholder="Entrer le numero de telephone" required>
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Profile</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="file" class="form-control" id="profile"
+                                                                        name="profile">
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+                                                           <div class="form-group row">
+                                                                <label class="col-sm-2 col-form-label">Sex</label>
+                                                                <div class="col-sm-10">
+                                                                    <input type="text" class="form-control" id="sex"
+                                                                        name="sex" placeholder="Sex or Male">
+                                                                    <span class="messages"></span>
+                                                                </div>
+                                                            </div>
+
+{#                                                            <div class="form-group row">#}
+{#                                                                <label class="col-sm-2 col-form-label">Vehicule</label>#}
+{#                                                                <div class="col-sm-10">#}
+{#                                                                    {{form.vehicule}}#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+
+                                                            <!-- Modal large-->
+                                                            <div class="form-group row">
+                                                                <label class="col-sm-2"></label>
+                                                                <div class="col-sm-10">
+                                                                <button type="submit" value="submit"
+                                                                    class="btn btn-primary waves-effect"
+                                                                    data-toggle="modal"
+                                                                    data-target="#large-Modal">Submit</button>
+                                                                </div>
+                                                            </div>
+                                                                <div class="modal fade" id="large-Modal" tabindex="-1"
+                                                                    role="dialog">
+                                                                    <div class="modal-dialog modal-lg" role="document">
+                                                                        <div class="modal-content">
+                                                                            <div class="modal-header">
+                                                                                <h4 class="modal-title">Message de Confirmation</h4>
+                                                                                <button type="button" class="close"
+                                                                                    data-dismiss="modal"
+                                                                                    aria-label="Close">
+                                                                                    <span
+                                                                                        aria-hidden="true">&times;</span>
+                                                                                </button>
+                                                                            </div>
+                                                                            <div class="modal-body">
+                                                                                <h5>Ajouter un nouveau client</h5>
+                                                                                <p>Les information du client ont correctement
+                                                                                    était enregistrer. Veuillez allez au menu liste des Clients</p>
+                                                                            </div>
+                                                                            <div class="modal-footer">
+                                                                                <button type="button"
+                                                                                    class="btn btn-danger "
+                                                                                    data-dismiss="modal">Close</button>
+                                                                            </div>
+                                                                            </div>
+                                                                        </div>
+                                                                    </div>
+
+{#                                                            <div class="form-group row">#}
+{#                                                                <label class="col-sm-2"></label>#}
+{#                                                                <div class="col-sm-10">#}
+{#                                                                    <button type="submit"#}
+{#                                                                        class="btn btn-primary m-b-0" >Submit</button>#}
+{#                                                                </div>#}
+{#                                                            </div>#}
+                                                        </form>
+                                                    </div>
+                                                </div>
+                                                </div>
+                                                <!-- Basic Inputs Validation end -->
+                        </div>
+                      </div>
+                    </div>
+                 </div>
+                 </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Warning Section Starts -->
+    <!-- Older IE warning message -->
+    <!--[if lt IE 10]>
+{#<div class="ie-warning">#}
+{#    <h1>Warning!!</h1>#}
+{#    <p>You are using an outdated version of Internet Explorer, please upgrade <br/>to any of the following web browsers to access this website.</p>#}
+{#    <div class="iew-container">#}
+{#        <ul class="iew-download">#}
+{#            <li>#}
+{#                <a href="http://www.google.com/chrome/">#}
+{#                    <img src="./files/assets/images/browser/chrome.png" alt="Chrome">#}
+{#                    <div>Chrome</div>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="https://www.mozilla.org/en-US/firefox/new/">#}
+{#                    <img src="./files/assets/images/browser/firefox.png" alt="Firefox">#}
+{#                    <div>Firefox</div>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="http://www.opera.com">#}
+{#                    <img src="./files/assets/images/browser/opera.png" alt="Opera">#}
+{#                    <div>Opera</div>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="https://www.apple.com/safari/">#}
+{#                    <img src="./files/assets/images/browser/safari.png" alt="Safari">#}
+{#                    <div>Safari</div>#}
+{#                </a>#}
+{#            </li>#}
+{#            <li>#}
+{#                <a href="http://windows.microsoft.com/en-us/internet-explorer/download-ie">#}
+{#                    <img src="./files/assets/images/browser/ie.png" alt="">#}
+{#                    <div>IE (9 & above)</div>#}
+{#                </a>#}
+{#            </li>#}
+{#        </ul>#}
+{#    </div>#}
+{#    <p>Sorry for the inconvenience!</p>#}
+{#</div>#}
+<![endif]-->
+    <!-- Warning Section Ends -->
+    <!-- Required Jquery -->
+    <script type="text/javascript" src="{% static 'bower_components/jquery/dist/jquery.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/jquery-ui/jquery-ui.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/popper.js/dist/umd/popper.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/bower_components/bootstrap/dist/js/bootstrap.min.js' %}"></script>
+    <!-- jquery slimscroll js -->
+    <script type="text/javascript" src="{% static '/bower_components/jquery-slimscroll/jquery.slimscroll.js' %}"></script>
+    <!-- modernizr js -->
+    <script type="text/javascript" src="{% static '/bower_components/modernizr/modernizr.js ' %}"></script>
+    <!-- Chart js -->
+    <script type="text/javascript" src="{% static '/bower_components/chart.js/dist/Chart.js' %}"></script>
+    <!-- amchart js -->
+    <script src="{% static '/assets/pages/widget/amchart/amcharts.js' %}"></script>
+    <script src="{% static '/assets/pages/widget/amchart/serial.js' %}"></script>
+    <script src="{% static '/assets/pages/widget/amchart/light.js' %}"></script>
+    <script src="{% static '/assets/js/jquery.mCustomScrollbar.concat.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/SmoothScroll.js' %}"></script>
+    <script src="{% static '/assets/js/pcoded.min.js' %}"></script>
+    <!-- custom js -->
+    <script src="{% static '/assets/js/vartical-layout.min.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/pages/dashboard/custom-dashboard.js' %}"></script>
+    <script type="text/javascript" src="{% static '/assets/js/script.min.js' %}"></script>
+</body>
+
+
+<!-- Mirrored from demo.dashboardpack.com/adminty-html/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Mon, 12 Oct 2020 10:39:08 GMT -->
+</html>

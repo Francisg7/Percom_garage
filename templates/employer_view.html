@@ -1,0 +1,145 @@
+{% extends "base.html" %}
+    {% block content %}
+
+            <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <div class="main-body">
+                                <div class="page-wrapper">
+                                    <div class="page-body">
+                                        <div class="row">
+                                            <!-- task, page, download counter  start -->
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-8">
+                                                                <h4 class="text-c-yellow f-w-600">0%</h4>
+                                                                <h6 class="text-muted m-b-0">Operation</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <i class="feather icon-bar-chart f-28"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer bg-c-yellow">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-9">
+                                                                <p class="text-white m-b-0">% operations rate</p>
+                                                            </div>
+                                                            <div class="col-3 text-right">
+                                                                <i class="feather icon-trending-up text-white f-16"></i>
+                                                            </div>
+                                                        </div>
+
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-8">
+                                                                <h4 class="text-c-green f-w-600">+0</h4>
+                                                                <h6 class="text-muted m-b-0">Clients</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <i class="feather icon-user f-28"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer bg-c-green">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-9">
+                                                                <p class="text-white m-b-0">% Increase</p>
+                                                            </div>
+                                                            <div class="col-3 text-right">
+                                                                <i class="feather icon-trending-up text-white f-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-8">
+                                                                <h4 class="text-c-pink f-w-600">+0%</h4>
+                                                                <h6 class="text-muted m-b-0">Depannage</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <i class="feather icon-calendar f-28"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer bg-c-pink">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-9">
+                                                                <p class="text-white m-b-0">% Request</p>
+                                                            </div>
+                                                            <div class="col-3 text-right">
+                                                                <i class="feather icon-trending-up text-white f-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-xl-3 col-md-6">
+                                                <div class="card">
+                                                    <div class="card-block">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-8">
+                                                                <h4 class="text-c-blue f-w-600">-0%</h4>
+                                                                <h6 class="text-muted m-b-0">Stock</h6>
+                                                            </div>
+                                                            <div class="col-4 text-right">
+                                                                <i class="feather icon-download f-28"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-footer bg-c-blue">
+                                                        <div class="row align-items-center">
+                                                            <div class="col-9">
+                                                                <p class="text-white m-b-0">% Rest</p>
+                                                            </div>
+                                                            <div class="col-3 text-right">
+                                                                <i class="feather icon-trending-up text-white f-16"></i>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- task, page, download counter  end -->
+
+                                            <!-- visitor start -->
+                                            <div class="col-xl-12 col-md-12">
+                                                <div class="card">
+                                                    <div class="card-header">
+                                                        <h5>Planning Rendez vous</h5>
+                                                        <span class="text-muted">Planning des Rendez-vous a effectuer </span>
+                                                        <div class="card-header-right">
+                                                            <ul class="list-unstyled card-option">
+                                                                <li><i class="feather icon-maximize full-card"></i></li>
+                                                                <li><i class="feather icon-minus minimize-card"></i>
+                                                                </li>
+                                                                <li><i class="feather icon-trash-2 close-card"></i></li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                    <div class="card-block">
+                                                        <div id="visitor" style="height:300px"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+{% endblock %}
+                    </div>
+                            </div>
+                        </div>
+                    </div>
+            </div>
