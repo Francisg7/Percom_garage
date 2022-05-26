@@ -1,17 +1,17 @@
 pipeline {
-    agent {
-        docker{
-            image: 'python:3.8.13-alpine3.16'
-        }
-    }
+    agent any
     stages {
-
         stage('Git Checkout') {
             steps {
                checkout scm
             }
         }
         stage('Build'){
+            agent {
+                docker {
+                    image 'python:3-alpine'
+                }
+            }
             steps{
             echo 'Build requirements'
             sh 'virtualenv venv --distribute'
