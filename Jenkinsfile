@@ -9,7 +9,7 @@ pipeline {
     }
     stages {
         stage('Start Notifications') {
-            agent { Dockerfile true }
+            agent { dockerfile true }
             steps {
                 // send build started notifications
                 sendNotifications 'STARTED'
@@ -61,7 +61,7 @@ pipeline {
             }
         }
         stage('Deploy to Dockerhub') {
-            agent { Dockerfile true }
+            agent { dockerfile true }
             steps {
                 // Deploy steps
                 echo 'Deploying to hub'
