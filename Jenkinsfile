@@ -1,6 +1,20 @@
 pipeline {
     agent any
+    triggers {
+        pollSCM('* * * * *')
+    }
+    options {
+        // Only keep the 10 most recent builds
+        buildDiscarder(logRotator(numToKeepStr:'10'))
+    }
     stages {
+        stage('Start Notifications') {
+            agent { Dockerfile true }
+            steps {
+                // send build started notifications
+                sendNotifications 'STARTED'
+            }
+        }
         stage('Git Checkout') {
             steps {
                checkout scm
@@ -10,7 +24,8 @@ pipeline {
             agent {
                 docker {
                     image 'python:3-alpine'
-                }
+                    args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+                 }
             }
             steps{
             echo 'Build requirements'
@@ -20,6 +35,12 @@ pipeline {
             }
         }
         stage('Build Docker Image'){
+            agent {
+                docker {
+                    image 'slopresto/jenkins-docker-agent:latest'
+                    args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+                 }
+            }
             steps{
             echo 'Build Image'
             sh 'docker-compose build'
@@ -27,6 +48,12 @@ pipeline {
         }
 
         stage('Test') {
+            agent {
+                docker {
+                    image 'slopresto/jenkins-docker-agent:latest'
+                    args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+                 }
+            }
             steps {
                 // Test steps
                 echo 'Testing Project...'
@@ -34,6 +61,7 @@ pipeline {
             }
         }
         stage('Deploy to Dockerhub') {
+            agent { Dockerfile true }
             steps {
                 // Deploy steps
                 echo 'Deploying to hub'
@@ -44,6 +72,12 @@ pipeline {
                 docker push franciswilliams/percom_garage:latest
                 """
             }
+        }
+
+    }
+    post {
+        always {
+            sendNotifications currentBuild.result
         }
     }
 }
