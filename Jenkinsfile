@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent {
+        docker{
+            image: 'python:3.8.13-alpine3.16'
+        }
+    }
     stages {
 
         stage('Git Checkout') {
@@ -10,6 +14,8 @@ pipeline {
         stage('Build'){
             steps{
             echo 'Build requirements'
+            sh 'virtualenv venv --distribute'
+            sh '. venv/bin/activate'
             sh 'pip install -r requirements.txt'
             }
         }
