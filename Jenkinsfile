@@ -23,19 +23,18 @@ pipeline {
             }
         }
         stage('Build'){
-//             agent {
-//                 docker {
-// //                     label 'docker'
-//                         image 'python:3-alpine'
-//
-//                  }
-//             }
+            agent {
+                docker {
+                    image 'slopresto/jenkins-docker-agent:latest'
+                    args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+                }
+            }
             steps{
                 withEnv(["HOME=${env.WORKSPACE}"]) {
                   sh "pip install virtualenv"
                   sh "virtualenv venv"
                   sh "pip install -r requirements.txt "
-                  sh " docker run -u 0 --privileged --name jenkins -it -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v /home/jenkins_home:/var/jenkins_home jenkins/jenkins"
+                  //sh "docker run -u 0 --privileged --name jenkins -it -d -p 8080:8080 -p 50000:50000 -v /var/run/docker.sock:/var/run/docker.sock -v $(which docker):/usr/bin/docker -v /home/jenkins_home:/var/jenkins_home jenkins/jenkins"
                 }
             }
         }
