@@ -25,9 +25,9 @@ pipeline {
         stage('Build'){
             agent {
                 docker {
-                    label 'docker'
+//                     label 'docker'
                         image 'python:3-alpine'
-                        args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+
                  }
             }
             steps{
