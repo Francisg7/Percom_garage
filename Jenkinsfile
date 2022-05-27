@@ -42,7 +42,7 @@ pipeline {
                 docker {
                     label 'docker'
                         image 'slopresto/jenkins-docker-agent:latest'
-                        args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+//                         args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
                  }
             }
             steps{
@@ -55,7 +55,7 @@ pipeline {
             agent {
                 docker {
                     label 'docker'
-                        args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+//                         args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
                  }
             }
             steps {
@@ -66,7 +66,6 @@ pipeline {
         }
         stage('Deploy to Dockerhub') {
             agent {
-                label 'docker'
                     dockerfile true }
             steps {
                 // Deploy steps
