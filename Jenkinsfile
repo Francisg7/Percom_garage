@@ -1,5 +1,5 @@
 pipeline {
-    agent any
+    agent {label "docker"}
     triggers {
         pollSCM('* * * * *')
     }
@@ -8,13 +8,13 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10'))
     }
     stages {
-        stage('Start Notifications') {
-            agent { dockerfile true }
-            steps {
-                // send build started notifications
-                sendNotifications 'STARTED'
-            }
-        }
+//         stage('Start Notifications') {
+//             agent { dockerfile true }
+//             steps {
+//                 // send build started notifications
+//                 sendNotifications 'STARTED'
+//             }
+//         }
         stage('Git Checkout') {
             steps {
                checkout scm
