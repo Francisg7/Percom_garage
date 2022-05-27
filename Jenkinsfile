@@ -25,8 +25,7 @@ pipeline {
         stage('Build'){
             agent {
                 docker {
-                    image 'slopresto/jenkins-docker-agent:latest'
-                    args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
+                    image 'python:3.8.13-alpine3.16'
                 }
             }
             steps{
