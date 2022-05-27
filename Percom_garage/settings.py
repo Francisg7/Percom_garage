@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     # 'knox',
     'rest_framework.authtoken',
     'rest_auth',
+    'django_jenkins'
     # 'allauth',
     # 'allauth.account',
     # 'rest_auth.registration',
@@ -65,6 +66,14 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+JENKINS_TASKS = (
+    'django_jenkins.tasks.run_pep8',
+    'django_jenkins.tasks.run_pyflakes',
+    'django_jenkins.tasks.run_jslint',
+    'django_jenkins.tasks.run_csslint',
+    'django_jenkins.tasks.run_sloccount'
+)
 
 ROOT_URLCONF = 'Percom_garage.urls'
 
