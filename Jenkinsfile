@@ -55,6 +55,7 @@ pipeline {
             agent {
                 docker {
                     label 'docker'
+                        image 'slopresto/jenkins-docker-agent:latest'
 //                         args '-v /var/run/docker.sock:/var/run/docker.sock -u jenkins'
                  }
             }
