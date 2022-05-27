@@ -11,7 +11,7 @@ pipeline {
         stage('Start Notifications') {
             agent {
                 label 'docker'
-                    dockerfile true }
+             }
             steps {
                 // send build started notifications
                 sendNotifications 'STARTED'
