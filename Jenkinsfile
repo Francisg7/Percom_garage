@@ -8,15 +8,15 @@ pipeline {
         buildDiscarder(logRotator(numToKeepStr:'10'))
     }
     stages {
-        stage('Start Notifications') {
-            agent {
-                label 'docker'
-             }
-            steps {
-                // send build started notifications
-                sendNotifications 'STARTED'
-            }
-        }
+//         stage('Start Notifications') {
+//             agent {
+//                 label 'docker'
+//              }
+//             steps {
+//                 // send build started notifications
+//                 sendNotifications 'STARTED'
+//             }
+//         }
         stage('Git Checkout') {
             steps {
                checkout scm
